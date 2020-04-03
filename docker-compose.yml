@@ -1,0 +1,16 @@
+version: "3"
+services:
+    gin-vegan-map-api:
+        image: gin/vegan-map-api
+        build: .
+        container_name: gin-vegan-map-api
+        restart: always
+        #network_mode: host
+        ports:
+          - "${SERVER_PORT}:${SERVER_PORT}"
+        networks:
+          - local-net
+networks:
+  local-net:
+    external:
+      name: local-net
