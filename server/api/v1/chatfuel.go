@@ -32,7 +32,7 @@ func GetRestaurantByTypeAndRegional(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, OkBody(result))
+	c.JSON(http.StatusOK, result)
 }
 
 // GetRestaurantByFriedAndRegional -
@@ -58,7 +58,7 @@ func GetRestaurantByFriedAndRegional(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, OkBody(result))
+	c.JSON(http.StatusOK, result)
 }
 
 // GetPicsByTypeAndRegional -
@@ -75,7 +75,7 @@ func GetPicsByTypeAndRegional(c *gin.Context) {
 	typeName := c.Param("type")
 	regional := c.Param("regional")
 
-	result, err := models.GetPicsByTypeAndRegional(typeName, regional)
+	result, err := models.GetPicsMessageByTypeAndRegional(typeName, regional)
 	if err != nil {
 		c.JSON(http.StatusBadRequest,
 			ErrBody(
@@ -85,5 +85,5 @@ func GetPicsByTypeAndRegional(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, OkBody(result))
+	c.JSON(http.StatusOK, result)
 }

@@ -47,3 +47,13 @@ func GetPicsByTypeAndRegional(typeName string, regional string) ([]Pics, error) 
 
 	return pics, nil
 }
+
+// GetPicsMessageByTypeAndRegional -
+func GetPicsMessageByTypeAndRegional(typeName string, regional string) (Messages, error) {
+	pics, err := GetPicsByTypeAndRegional(typeName, regional)
+	if err != nil {
+		return Messages{}, err
+	}
+
+	return getGalleryMessages(pics)
+}
