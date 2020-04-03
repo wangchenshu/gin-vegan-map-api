@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： mysql
--- 產生時間： 2020 年 03 月 29 日 05:32
+-- 產生時間： 2020 年 04 月 03 日 15:55
 -- 伺服器版本： 5.7.29
 -- PHP 版本： 7.4.1
 
@@ -462,7 +462,9 @@ INSERT INTO `pics` (`id`, `regional`, `name`, `url`, `type`, `created_at`) VALUE
 (9, '南部', '燒烤_餐廳_彰化_台', 'https://firebasestorage.googleapis.com/v0/b/walter-bot-a2142.appspot.com/o/line-bot%2Fimage%2Fvegan-map%2F%E7%87%92%E7%83%A4_%E9%A4%90%E5%BB%B3%2F%E7%87%92%E7%83%A4_%E9%A4%90%E5%BB%B3_%E5%BD%B0%E5%8C%96_%E5%8F%B0%E5%8D%97.jpg?alt=media&token=517370bc-f92e-407b-a5be-8d835210df4a', '燒烤', '2020-03-29 03:50:47'),
 (10, '中部', '港式_餐廳_台中', 'https://firebasestorage.googleapis.com/v0/b/walter-bot-a2142.appspot.com/o/line-bot%2Fimage%2Fvegan-map%2F%E6%B8%AF%E5%BC%8F_%E9%A4%90%E5%BB%B3%2F%E6%B8%AF%E5%BC%8F_%E9%A4%90%E5%BB%B3_%E5%8F%B0%E4%B8%AD.jpg?alt=media&token=2739000f-226d-4284-b00b-dabf36943853', '港式', '2020-03-29 03:53:02'),
 (11, '北部', '港式_餐廳_台北', 'https://firebasestorage.googleapis.com/v0/b/walter-bot-a2142.appspot.com/o/line-bot%2Fimage%2Fvegan-map%2F%E6%B8%AF%E5%BC%8F_%E9%A4%90%E5%BB%B3%2F%E6%B8%AF%E5%BC%8F_%E9%A4%90%E5%BB%B3_%E5%8F%B0%E5%8C%97.jpg?alt=media&token=a757e2da-fb7b-4fb4-ae81-b9a92eddd95a', '港式', '2020-03-29 03:53:02'),
-(12, '不分', '素食民宿', 'https://firebasestorage.googleapis.com/v0/b/walter-bot-a2142.appspot.com/o/line-bot%2Fimage%2Fvegan-map%2F%E6%B0%91%E5%AE%BF%2F%E7%B4%A0%E9%A3%9F%E6%B0%91%E5%AE%BF_1.jpg?alt=media&token=5f66d069-6c99-404a-ab11-93aa833e2f3c', '民宿', '2020-03-29 05:17:01');
+(12, '不分', '素食民宿', 'https://firebasestorage.googleapis.com/v0/b/walter-bot-a2142.appspot.com/o/line-bot%2Fimage%2Fvegan-map%2F%E6%B0%91%E5%AE%BF%2F%E7%B4%A0%E9%A3%9F%E6%B0%91%E5%AE%BF_1.jpg?alt=media&token=5f66d069-6c99-404a-ab11-93aa833e2f3c', '民宿', '2020-03-29 05:17:01'),
+(13, '北部', '親子_餐廳_北部', 'https://firebasestorage.googleapis.com/v0/b/walter-bot-a2142.appspot.com/o/line-bot%2Fimage%2Fvegan-map%2F%E8%A6%AA%E5%AD%90_%E9%A4%90%E5%BB%B3%2F%E8%A6%AA%E5%AD%90_%E9%A4%90%E5%BB%B3_%E5%8C%97%E9%83%A8.jpg?alt=media&token=8f62e718-9a5b-46a2-9aa3-38d214a60bcd', '親子', '2020-03-29 06:43:05'),
+(14, '不分', '素食旅行_1', 'https://firebasestorage.googleapis.com/v0/b/walter-bot-a2142.appspot.com/o/line-bot%2Fimage%2Fvegan-map%2F%E7%B4%A0%E9%A3%9F%E6%97%85%E8%A1%8C%2F%E7%B4%A0%E9%A3%9F%E6%97%85%E8%A1%8C_1.jpg?alt=media&token=029f7954-9795-4e10-8920-1867c0511bc4', '旅行', '2020-04-03 15:48:31');
 
 -- --------------------------------------------------------
 
@@ -590,7 +592,7 @@ ALTER TABLE `city`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `pics`
 --
 ALTER TABLE `pics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `restaurant`
