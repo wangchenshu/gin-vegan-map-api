@@ -9,7 +9,6 @@ import (
 	"github.com/unknwon/com"
 )
 
-// GetPics -
 // GetPics - 取得圖片列表
 // @Summary 取得圖片列表
 // @Description 取得圖片列表
@@ -60,8 +59,7 @@ func GetPic(c *gin.Context) {
 	c.JSON(http.StatusOK, OkBody(result))
 }
 
-// GetPicsByTypeAndRegional -
-// GetEmployee - 以分類及地區取得圖片資料
+// GetPicsByTypeAndRegional - 以分類及地區取得圖片資料
 // @Summary 以分類及地區取得圖片資料
 // @Description 以分類及地區取得圖片資料
 // @Tags 圖片

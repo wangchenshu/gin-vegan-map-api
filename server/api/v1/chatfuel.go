@@ -8,10 +8,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// GetChatfuelRestaurantByTypeAndRegional -
-// GetEmployee - 以分類及地區取得資料
-// @Summary 以分類及取得資料
-// @Description 以分類及取得資料
+// GetChatfuelRestaurantByTypeAndRegional - 以分類及地區取得資料
+// @Summary 以分類及地區取得資料
+// @Description 以分類及地區取得資料
 // @Tags Chatfuel
 // @Accept  json
 // @Produce  json
@@ -35,8 +34,7 @@ func GetChatfuelRestaurantByTypeAndRegional(c *gin.Context) {
 	c.JSON(http.StatusOK, result)
 }
 
-// GetRestaurantByFriedAndRegional -
-// GetEmployee - 以地區取得炸物資料
+// GetRestaurantByFriedAndRegional - 以地區取得炸物資料
 // @Summary 以地區取得炸物資料
 // @Description 以地區取得炸物資料
 // @Tags Chatfuel
@@ -61,8 +59,7 @@ func GetRestaurantByFriedAndRegional(c *gin.Context) {
 	c.JSON(http.StatusOK, result)
 }
 
-// GetChatfurlPicsByTypeAndRegional -
-// GetEmployee - 以分類及地區取得圖片資料
+// GetChatfurlPicsByTypeAndRegional - 以分類及地區取得圖片資料
 // @Summary 以分類及地區取得圖片資料
 // @Description 以分類及地區取得圖片資料
 // @Tags Chatfuel

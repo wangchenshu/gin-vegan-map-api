@@ -9,8 +9,7 @@ import (
 	"github.com/unknwon/com"
 )
 
-// GetRestaurants -
-// GetEmployee - 取得餐廳列表
+// GetRestaurants - 取得餐廳列表
 // @Summary 取得餐廳列表
 // @Description 取得餐廳列表
 // @Tags 餐廳
@@ -60,8 +59,7 @@ func GetRestaurant(c *gin.Context) {
 	c.JSON(http.StatusOK, OkBody(result))
 }
 
-// GetRestaurantsByTypeAndRegional -
-// GetEmployee - 以分類及地區取得餐廳資料
+// GetRestaurantsByTypeAndRegional - 以分類及地區取得餐廳資料
 // @Summary 以分類及取得餐廳資料
 // @Description 以分類及取得餐廳資料
 // @Tags 餐廳
