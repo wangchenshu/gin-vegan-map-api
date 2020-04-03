@@ -34,7 +34,7 @@
                 }
             }
         },
-        "/api/v1/chatfuel/type/{type}/regional/{regional}/pic": {
+        "/api/v1/chatfuel/pics/type/{type}/regional/{regional}": {
             "get": {
                 "description": "以分類及地區取得圖片資料",
                 "consumes": [
@@ -63,9 +63,9 @@
                 }
             }
         },
-        "/api/v1/chatfuel/type/{type}/{regional}": {
+        "/api/v1/chatfuel/restaurants/type/{type}/{regional}": {
             "get": {
-                "description": "以分類及取得資料",
+                "description": "以分類及地區取得資料",
                 "consumes": [
                     "application/json"
                 ],
@@ -75,7 +75,181 @@
                 "tags": [
                     "Chatfuel"
                 ],
-                "summary": "以分類及取得資料",
+                "summary": "以分類及地區取得資料",
+                "responses": {
+                    "200": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    },
+                    "500": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/pics": {
+            "get": {
+                "description": "取得圖片列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "圖片"
+                ],
+                "summary": "取得圖片列表",
+                "responses": {
+                    "200": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    },
+                    "500": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/pics-type/{type}/regional/{regional}": {
+            "get": {
+                "description": "以分類及地區取得圖片資料",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "圖片"
+                ],
+                "summary": "以分類及地區取得圖片資料",
+                "responses": {
+                    "200": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    },
+                    "500": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/pics/{id}": {
+            "get": {
+                "description": "取得圖片資料",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "圖片"
+                ],
+                "summary": "取得圖片資料",
+                "responses": {
+                    "200": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    },
+                    "500": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/restaurants": {
+            "get": {
+                "description": "取得餐廳列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "餐廳"
+                ],
+                "summary": "取得餐廳列表",
+                "responses": {
+                    "200": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    },
+                    "500": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/restaurants-type/{type}/{regional}": {
+            "get": {
+                "description": "以分類及取得餐廳資料",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "餐廳"
+                ],
+                "summary": "以分類及取得餐廳資料",
+                "responses": {
+                    "200": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    },
+                    "500": {
+                        "description": "desc",
+                        "schema": {
+                            "$ref": "#/definitions/models.JSONResult"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/restaurants/{id}": {
+            "get": {
+                "description": "取得餐廳資料",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "餐廳"
+                ],
+                "summary": "取得餐廳資料",
                 "responses": {
                     "200": {
                         "description": "desc",

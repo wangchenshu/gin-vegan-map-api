@@ -31,26 +31,7 @@ paths:
       summary: 以地區取得炸物資料
       tags:
       - Chatfuel
-  /api/v1/chatfuel/type/{type}/{regional}:
-    get:
-      consumes:
-      - application/json
-      description: 以分類及取得資料
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: desc
-          schema:
-            $ref: '#/definitions/models.JSONResult'
-        "500":
-          description: desc
-          schema:
-            $ref: '#/definitions/models.JSONResult'
-      summary: 以分類及取得資料
-      tags:
-      - Chatfuel
-  /api/v1/chatfuel/type/{type}/regional/{regional}/pic:
+  /api/v1/chatfuel/pics/type/{type}/regional/{regional}:
     get:
       consumes:
       - application/json
@@ -69,6 +50,139 @@ paths:
       summary: 以分類及地區取得圖片資料
       tags:
       - Chatfuel
+  /api/v1/chatfuel/restaurants/type/{type}/{regional}:
+    get:
+      consumes:
+      - application/json
+      description: 以分類及地區取得資料
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+      summary: 以分類及地區取得資料
+      tags:
+      - Chatfuel
+  /api/v1/pics:
+    get:
+      consumes:
+      - application/json
+      description: 取得圖片列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+      summary: 取得圖片列表
+      tags:
+      - 圖片
+  /api/v1/pics-type/{type}/regional/{regional}:
+    get:
+      consumes:
+      - application/json
+      description: 以分類及地區取得圖片資料
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+      summary: 以分類及地區取得圖片資料
+      tags:
+      - 圖片
+  /api/v1/pics/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 取得圖片資料
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+      summary: 取得圖片資料
+      tags:
+      - 圖片
+  /api/v1/restaurants:
+    get:
+      consumes:
+      - application/json
+      description: 取得餐廳列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+      summary: 取得餐廳列表
+      tags:
+      - 餐廳
+  /api/v1/restaurants-type/{type}/{regional}:
+    get:
+      consumes:
+      - application/json
+      description: 以分類及取得餐廳資料
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+      summary: 以分類及取得餐廳資料
+      tags:
+      - 餐廳
+  /api/v1/restaurants/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 取得餐廳資料
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/models.JSONResult'
+      summary: 取得餐廳資料
+      tags:
+      - 餐廳
   /api/v1/users:
     get:
       consumes:
