@@ -149,7 +149,7 @@ paths:
     get:
       consumes:
       - application/json
-      description: 以分類及取得餐廳資料
+      description: 以分類及地區取得餐廳資料
       produces:
       - application/json
       responses:
@@ -161,7 +161,7 @@ paths:
           description: desc
           schema:
             $ref: '#/definitions/models.JSONResult'
-      summary: 以分類及取得餐廳資料
+      summary: 以分類及地區取得餐廳資料
       tags:
       - 餐廳
   /api/v1/restaurants/{id}:

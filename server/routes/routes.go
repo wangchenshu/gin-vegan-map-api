@@ -30,7 +30,7 @@ func Engine() *gin.Engine {
 
 		// Chatfuel
 		ver1.GET("/chatfuel/restaurants/type/:type/regional/:regional", v1.GetChatfuelRestaurantByTypeAndRegional)
-		ver1.GET("/chatfuel/pics/type/:type/regional/:regional", v1.GetChatfurlPicsByTypeAndRegional)
+		ver1.GET("/chatfuel/pics/type/:type/regional/:regional", v1.GetChatfuelPicsByTypeAndRegional)
 	}
 
 	return r

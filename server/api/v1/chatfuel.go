@@ -59,7 +59,7 @@ func GetRestaurantByFriedAndRegional(c *gin.Context) {
 	c.JSON(http.StatusOK, result)
 }
 
-// GetChatfurlPicsByTypeAndRegional - 以分類及地區取得圖片資料
+// GetChatfuelPicsByTypeAndRegional - 以分類及地區取得圖片資料
 // @Summary 以分類及地區取得圖片資料
 // @Description 以分類及地區取得圖片資料
 // @Tags Chatfuel
@@ -68,7 +68,7 @@ func GetRestaurantByFriedAndRegional(c *gin.Context) {
 // @Success 200 {object} models.JSONResult{data=string} "desc"
 // @Failure 500 {object} models.JSONResult{data=string} "desc"
 // @Router /api/v1/chatfuel/pics/type/{type}/regional/{regional} [get]
-func GetChatfurlPicsByTypeAndRegional(c *gin.Context) {
+func GetChatfuelPicsByTypeAndRegional(c *gin.Context) {
 	typeName := c.Param("type")
 	regional := c.Param("regional")
 

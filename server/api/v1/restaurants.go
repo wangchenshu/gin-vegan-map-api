@@ -60,8 +60,8 @@ func GetRestaurant(c *gin.Context) {
 }
 
 // GetRestaurantsByTypeAndRegional - 以分類及地區取得餐廳資料
-// @Summary 以分類及取得餐廳資料
-// @Description 以分類及取得餐廳資料
+// @Summary 以分類及地區取得餐廳資料
+// @Description 以分類及地區取得餐廳資料
 // @Tags 餐廳
 // @Accept  json
 // @Produce  json

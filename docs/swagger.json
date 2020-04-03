@@ -210,7 +210,7 @@
         },
         "/api/v1/restaurants-type/{type}/{regional}": {
             "get": {
-                "description": "以分類及取得餐廳資料",
+                "description": "以分類及地區取得餐廳資料",
                 "consumes": [
                     "application/json"
                 ],
@@ -220,7 +220,7 @@
                 "tags": [
                     "餐廳"
                 ],
-                "summary": "以分類及取得餐廳資料",
+                "summary": "以分類及地區取得餐廳資料",
                 "responses": {
                     "200": {
                         "description": "desc",
