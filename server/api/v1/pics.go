@@ -6,22 +6,21 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/unknwon/com"
 )
 
-// GetChatfuelRestaurantByTypeAndRegional -
-// GetEmployee - 以分類及地區取得資料
-// @Summary 以分類及取得資料
-// @Description 以分類及取得資料
-// @Tags Chatfuel
+// GetPics -
+// GetPics - 取得圖片列表
+// @Summary 取得圖片列表
+// @Description 取得圖片列表
+// @Tags 圖片
 // @Accept  json
 // @Produce  json
 // @Success 200 {object} models.JSONResult{data=string} "desc"
 // @Failure 500 {object} models.JSONResult{data=string} "desc"
-// @Router /api/v1/chatfuel/restaurants/type/{type}/{regional} [get]
-func GetChatfuelRestaurantByTypeAndRegional(c *gin.Context) {
-	typeName := c.Param("type")
-	regional := c.Param("regional")
-	result, err := models.GetRestaurantsByTypeAndRegional(typeName, regional)
+// @Router /api/v1/pics [get]
+func GetPics(c *gin.Context) {
+	result, err := models.GetPics()
 
 	if err != nil {
 		c.JSON(http.StatusBadRequest,
@@ -32,24 +31,24 @@ func GetChatfuelRestaurantByTypeAndRegional(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, result)
+	c.JSON(http.StatusOK, OkBody(result))
 }
 
-// GetRestaurantByFriedAndRegional -
-// GetEmployee - 以地區取得炸物資料
-// @Summary 以地區取得炸物資料
-// @Description 以地區取得炸物資料
-// @Tags Chatfuel
+// GetPic - 取得圖片資料
+// @Summary 取得圖片資料
+// @Description 取得圖片資料
+// @Tags 圖片
 // @Accept  json
 // @Produce  json
 // @Success 200 {object} models.JSONResult{data=string} "desc"
 // @Failure 500 {object} models.JSONResult{data=string} "desc"
-// @Router /api/v1/chatfuel/fried/{regional} [get]
-func GetRestaurantByFriedAndRegional(c *gin.Context) {
-	regional := c.Param("regional")
-	result, err := models.GetRestaurantsByFriedRegional(regional)
+// @Router /api/v1/pics/{id} [get]
+func GetPic(c *gin.Context) {
 
-	if err != nil {
+	id := com.StrTo(c.Param("id")).MustInt()
+	result, err := models.GetPic(id)
+
+	if err != nil || result.ID <= 0 {
 		c.JSON(http.StatusBadRequest,
 			ErrBody(
 				http.StatusBadRequest,
@@ -58,24 +57,24 @@ func GetRestaurantByFriedAndRegional(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, result)
+	c.JSON(http.StatusOK, OkBody(result))
 }
 
-// GetChatfurlPicsByTypeAndRegional -
+// GetPicsByTypeAndRegional -
 // GetEmployee - 以分類及地區取得圖片資料
 // @Summary 以分類及地區取得圖片資料
 // @Description 以分類及地區取得圖片資料
-// @Tags Chatfuel
+// @Tags 圖片
 // @Accept  json
 // @Produce  json
 // @Success 200 {object} models.JSONResult{data=string} "desc"
 // @Failure 500 {object} models.JSONResult{data=string} "desc"
-// @Router /api/v1/chatfuel/pics/type/{type}/regional/{regional} [get]
-func GetChatfurlPicsByTypeAndRegional(c *gin.Context) {
+// @Router /api/v1/pics-type/{type}/regional/{regional} [get]
+func GetPicsByTypeAndRegional(c *gin.Context) {
 	typeName := c.Param("type")
 	regional := c.Param("regional")
 
-	result, err := models.GetPicsMessageByTypeAndRegional(typeName, regional)
+	result, err := models.GetPicsByTypeAndRegional(typeName, regional)
 	if err != nil {
 		c.JSON(http.StatusBadRequest,
 			ErrBody(
@@ -85,5 +84,5 @@ func GetChatfurlPicsByTypeAndRegional(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, result)
+	c.JSON(http.StatusOK, OkBody(result))
 }

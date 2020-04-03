@@ -32,6 +32,22 @@ func GetPics() ([]Pics, error) {
 	return pics, nil
 }
 
+// GetPic - get pic
+func GetPic(id int) (Pics, error) {
+	var (
+		pic Pics
+		err error
+	)
+
+	err = db.Db.Where("id = ?", id).First(&pic).Error
+
+	if err != nil && err != gorm.ErrRecordNotFound {
+		return pic, err
+	}
+
+	return pic, nil
+}
+
 // GetPicsByTypeAndRegional -
 func GetPicsByTypeAndRegional(typeName string, regional string) ([]Pics, error) {
 	var (
